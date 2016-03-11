@@ -3,12 +3,12 @@
 FROM golang
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/Sando92/larate
+ADD . /go/src/github.com/sando92/larate
 
 # Build the larate command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/Sando92/larate
+RUN go install github.com/sando92/larate
 
 # Run the larate command by default when the container starts.
 ENTRYPOINT ["/go/bin/larate"]
